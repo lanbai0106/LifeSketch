@@ -31,7 +31,6 @@ template<uint32_t key_len> struct LifeSketch_CM {
 					rep2 (i, 0, k) {
 						int dre = a[i][pointer]*ratio;
 						a[i][pointer] -= dre;
-						// a[i][pointer]*=ratio;
 					}
 					pointer = (pointer + 1) % m;
 				}
@@ -41,7 +40,6 @@ template<uint32_t key_len> struct LifeSketch_CM {
 				if((clock % tmp)==0) {
 					rep2 (i, 0, k) {
 						a[i][pointer] -= a[i][pointer]*ratio;
-						// a[i][pointer]*=ratio;
 					}
 					pointer = (pointer + 1) % m;
 				}
@@ -50,7 +48,6 @@ template<uint32_t key_len> struct LifeSketch_CM {
 		int hashid[k];
 		rep2 (i, 0, k) hashid[i] = hash[i]->run((char *)&key, key_len) % m;
 		rep2 (i, 0, k) {
-			// int pos = hash[i]->run((char *)&key, key_len) % m;
 			a[i][hashid[i]] += win;
 		}
 
