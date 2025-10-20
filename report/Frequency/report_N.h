@@ -26,6 +26,7 @@ void print_result(vector<double> aae_list, vector<double> are_list) {
         cout << are_list[i] << " ";
     }
     cout << endl;
+    cout << endl;
 }
 void print_results() {
     cout << "LS: \n";
