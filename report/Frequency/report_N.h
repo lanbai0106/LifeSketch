@@ -25,7 +25,7 @@ void print_result(vector<double> aae_list, vector<double> are_list) {
     for(int i = 0;i < 5; i++) {
         cout << are_list[i] << " ";
     }
-    cout << endl;
+
     cout << endl;
 }
 void print_results() {
